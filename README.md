@@ -25,9 +25,9 @@ A machine learning service for forecasting Consumer Price Index (CPI) trends usi
 
 ## Usage
 
-### Training the Models
+### Training the Models (optional)
 
-Before running the service, you need to train the SARIMA models on the historical data:
+Before running the service, you may train the SARIMA models on the historical data:
 
 ```bash
 python train_model.py
@@ -92,41 +92,3 @@ The project uses historical CPI data stored in the `data/` directory:
 
 Data format: CSV with columns `date` (YYYY-MM-DD) and `cpi` (float).
 
-## Project Structure
-
-```
-costsense-ml/
-├── app.py                 # FastAPI application
-├── train_model.py         # Model training script
-├── requirements.txt       # Python dependencies
-├── data/                  # Historical CPI data
-│   ├── food_cpi_ts.csv
-│   ├── rent_cpi_ts.csv
-│   └── transport_cpi_ts.csv
-└── models/                # Trained model files
-    ├── food_cpi_sarima.pkl
-    ├── rent_cpi_sarima.pkl
-    └── transport_cpi_sarima.pkl
-```
-
-## Dependencies
-
-Key dependencies include:
-- FastAPI: Web framework
-- pandas: Data manipulation
-- statsmodels: Statistical modeling (SARIMA)
-- joblib: Model serialization
-- uvicorn: ASGI server
-
-See `requirements.txt` for the complete list.
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## License
-
-MIT License
