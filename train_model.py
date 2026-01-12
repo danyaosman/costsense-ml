@@ -32,5 +32,4 @@ results = model.fit()
 # Save model
 joblib.dump(results, MODEL_PATH)
 
-print(f"Model saved to {MODEL_PATH}")
-
+print(results.summary())
